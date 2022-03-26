@@ -1,0 +1,51 @@
+action = input("Какое действие выполняем? + ; - ; / ; * ; ** ; Найти корни; Квадратный корень : ") 
+
+if action == "+":
+    a = float( input("Первое число это: ") )
+    b = float( input("Второе число это: ") )
+    c = a + b
+    print (str(a) + " плюс " + str(b) + " будет " + str(c))
+elif action == "-":
+    a = float( input("Первое число это: ") )
+    b = float( input("Второе число это: ") )
+    c = a - b
+    print (str(a) + " минус " + str(b) + " будет " + str(c))
+elif action == "/":
+    a = float( input("Первое число это: ") )
+    b = float( input("Второе число это: ") )
+    c = a / b
+    print (str(a) + " разделить на " + str(b) + " будет " + str(c))
+elif action == "*":
+    a = float( input("Первое число это: ") )
+    b = float( input("Второе число это: ") )
+    c = a * b
+    print (str(a) + " на " + str(b) + " будет " + str(c))
+elif action == "**":
+    a = float( input("Первое число это: ") )
+    b = float( input("Второе число это: ") )
+    c = a ** b
+    print (str(a) + " в степени " + str(b) + " будет " + str(c))
+elif action == "Квадратный корень":
+    a = float(input("Квадратный корень какого числа Вам нужен?: "))
+    b = a**0.5
+    print("Квадратный корень числа " + str(a) + " будет: " + str(b))
+elif action == "Найти корни":
+    a = float(input("Переменная a = "))
+    b = float(input("Переменная b = "))
+    c = float(input("Переменная c = "))
+    D = b**float(2)-float(4)*a*c
+    print("Дискреминант равен: " + D)
+    if D > 0:
+        x1 = (-b - (float(D) ** 0.5)) / (float(2) * a)
+        x2 = (-b + (float(D) ** 0.5)) / (float(2) * a)
+        print("Первый корень: " + x1)
+        print("Второй корень: " + x2)
+    elif D == 0:
+        p = -b / (2 * a)
+        print("Корень один, и он равен " + p)
+    else :
+        print("Корней нет")
+
+
+else :
+    print("Ты по-моему перепутал" )
